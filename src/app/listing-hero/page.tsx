@@ -267,9 +267,9 @@ export default function ListingHeroPage() {
             </h2>
           </div>
 
-          <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
             <ul className="space-y-3 text-sm text-slate-700 sm:text-base">
-              <li>Estate agents who want more clicks and better enquiries on Rightmove / Zoopla</li>
+              <li>Estate agents who want more clicks and better enquiries on Rightmove and Zoopla</li>
               <li>Lettings teams wanting consistent, polished listings across a portfolio</li>
               <li>Agencies that need fast, reliable edits without changing photographers</li>
             </ul>
@@ -279,88 +279,16 @@ export default function ListingHeroPage() {
 
       {/* Final CTA */}
       <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 pb-14 pt-4 sm:pb-16 sm:pt-6">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-[#0A0E27] sm:text-4xl">
-              Final CTA
-            </h2>
-            <p className="mt-3 text-base text-slate-600 sm:text-lg">
+            <p className="text-sm text-slate-600 sm:text-base">
+              Every image is professionally edited using industry-standard tools, with careful attention to colour,
+              lighting, and realism — no shortcuts, no gimmicks.
+            </p>
+            <p className="mt-6 text-base text-slate-600 sm:text-lg">
               Message us on WhatsApp and send your photos — we’ll take it from there.
             </p>
           </div>
-
-          <div className="mx-auto mt-8 max-w-xl">
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-semibold text-[#0066FF] shadow-sm ring-1 ring-slate-200 transition hover:bg-slate-50"
-            >
-              WhatsApp Us Your Photos
-            </a>
-          </div>
-
-          {/* Formspree contact form (secondary CTA) */}
-          <section id="form" className="mx-auto mt-10 max-w-xl">
-            <h3 className="text-center text-xl font-bold tracking-tight text-[#0A0E27]">
-              Prefer a Form Instead?
-            </h3>
-
-            <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-              {submitStatus === 'success' ? (
-                <div className="text-center py-2">
-                  <div className="text-green-700 text-base font-semibold">
-                    Thanks — we’ll be in touch shortly.
-                  </div>
-                </div>
-              ) : (
-                <form action="https://formspree.io/f/xqeavjrq" method="POST" className="space-y-4">
-                  <input type="hidden" name="_subject" value="New Website Enquiry – FixBlox" />
-                  <input type="hidden" name="_next" value={redirectUrl} />
-                  <input type="hidden" name="source" value="listing-hero" />
-
-                  <div>
-                    <label htmlFor="email" className="block mb-2 font-semibold text-[#2d3748]">
-                      Email address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full p-3 border-2 border-[#e2e8f0] rounded-md text-base font-sans transition-colors focus:outline-none focus:border-[#4A9EFF] bg-white"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block mb-2 font-semibold text-[#2d3748]">
-                      Message (optional)
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className="w-full p-3 border-2 border-[#e2e8f0] rounded-md text-base font-sans transition-colors focus:outline-none focus:border-[#4A9EFF] bg-white"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full p-4 text-white border-none rounded-md text-[1.05rem] font-semibold cursor-pointer"
-                    style={{
-                      background: 'linear-gradient(135deg, #4A9EFF 0%, #42D9FF 100%)',
-                    }}
-                  >
-                    Send Details
-                  </button>
-
-                  <p className="text-center text-sm text-slate-600">
-                    We’ll get back to you within one working day.
-                  </p>
-                </form>
-              )}
-            </div>
-          </section>
         </div>
       </section>
     </main>
