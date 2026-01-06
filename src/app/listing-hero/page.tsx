@@ -1,6 +1,25 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 export default function ListingHeroPage() {
   const whatsappHref = "https://wa.me/447925990923";
   const freeExampleHref = "#before-after";
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [redirectUrl, setRedirectUrl] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Return to this page after Formspree submission
+      setRedirectUrl(`${window.location.origin}${window.location.pathname}?submitted=true#form`);
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('submitted') === 'true') {
+      setSubmitStatus('success');
+      window.history.replaceState({}, '', window.location.pathname + '#form');
+    }
+  }, []);
 
   return (
     <main className="bg-white text-slate-900">
@@ -245,13 +264,67 @@ export default function ListingHeroPage() {
             </a>
           </div>
 
-          {/* Simple contact form placeholder */}
-          <div className="mx-auto mt-6 max-w-xl rounded-2xl border border-slate-200 bg-slate-50 p-6">
-            <div className="text-sm font-semibold text-slate-700">Contact form (placeholder)</div>
-            <div className="mt-2 text-sm text-slate-600">
-              If you want a form here, we can reuse the existing marketing contact approach without adding backend.
+          {/* Formspree contact form (secondary CTA) */}
+          <section id="form" className="mx-auto mt-10 max-w-xl">
+            <h3 className="text-center text-xl font-bold tracking-tight text-[#0A0E27]">
+              Prefer a Form Instead?
+            </h3>
+
+            <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              {submitStatus === 'success' ? (
+                <div className="text-center py-2">
+                  <div className="text-green-700 text-base font-semibold">
+                    Thanks — we’ll be in touch shortly.
+                  </div>
+                </div>
+              ) : (
+                <form action="https://formspree.io/f/xqeavjrq" method="POST" className="space-y-4">
+                  <input type="hidden" name="_subject" value="New Website Enquiry – FixBlox" />
+                  <input type="hidden" name="_next" value={redirectUrl} />
+                  <input type="hidden" name="source" value="listing-hero" />
+
+                  <div>
+                    <label htmlFor="email" className="block mb-2 font-semibold text-[#2d3748]">
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full p-3 border-2 border-[#e2e8f0] rounded-md text-base font-sans transition-colors focus:outline-none focus:border-[#4A9EFF] bg-white"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block mb-2 font-semibold text-[#2d3748]">
+                      Message (optional)
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      className="w-full p-3 border-2 border-[#e2e8f0] rounded-md text-base font-sans transition-colors focus:outline-none focus:border-[#4A9EFF] bg-white"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full p-4 text-white border-none rounded-md text-[1.05rem] font-semibold cursor-pointer"
+                    style={{
+                      background: 'linear-gradient(135deg, #4A9EFF 0%, #42D9FF 100%)',
+                    }}
+                  >
+                    Send Details
+                  </button>
+
+                  <p className="text-center text-sm text-slate-600">
+                    We’ll get back to you within one working day.
+                  </p>
+                </form>
+              )}
             </div>
-          </div>
+          </section>
         </div>
       </section>
     </main>
