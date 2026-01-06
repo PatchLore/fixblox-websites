@@ -74,11 +74,14 @@ export default function ListingHeroPage() {
 
       {/* Before / After */}
       <section id="before-after" className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#0A0E27] sm:text-4xl">
               See the Difference
             </h2>
+            <p className="mt-3 text-sm text-slate-600 sm:text-base">
+              A typical listing photo, professionally polished within 24 hours.
+            </p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -116,6 +119,22 @@ export default function ListingHeroPage() {
           <p className="mt-6 text-center text-sm text-slate-500">
             Example edit using a stock property image to demonstrate our enhancement process.
           </p>
+
+          <div className="mt-8 text-center">
+            <div className="text-lg font-bold tracking-tight text-[#0A0E27]">
+              Ready to upgrade your listings?
+            </div>
+            <div className="mt-4 flex justify-center">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-semibold text-[#0066FF] shadow-sm ring-1 ring-slate-200 transition hover:bg-slate-50"
+              >
+                Send Your Photos on WhatsApp
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
