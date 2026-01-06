@@ -1,31 +1,17 @@
-'use client';
+import type { Metadata } from 'next';
 
-import { useEffect, useState } from 'react';
+export const metadata: Metadata = {
+  title: 'Real Estate Photo Editing Service UK | 24h Turnaround',
+};
 
 export default function ListingHeroPage() {
   const whatsappHref = "https://wa.me/447925990923";
-  const freeExampleHref = "#before-after";
   // Why images weren’t rendering:
   // - Next.js only serves static files from /public (not from /src or repo root).
   // - This project also uses `basePath: "/websites"` so public assets are served at
   //   `/websites/<asset>`. A plain <img> does NOT auto-prefix the basePath.
   const beforeImageSrc = "/websites/images/before.png";
   const afterImageSrc = "/websites/images/after.jpg";
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [redirectUrl, setRedirectUrl] = useState('');
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Return to this page after Formspree submission
-      setRedirectUrl(`${window.location.origin}${window.location.pathname}?submitted=true#form`);
-    }
-
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('submitted') === 'true') {
-      setSubmitStatus('success');
-      window.history.replaceState({}, '', window.location.pathname + '#form');
-    }
-  }, []);
 
   return (
     <main className="bg-white text-slate-900">
@@ -59,12 +45,6 @@ export default function ListingHeroPage() {
                 className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-semibold text-[#0066FF] shadow-sm transition hover:bg-white/95"
               >
                 WhatsApp Us Your Photos
-              </a>
-              <a
-                href={freeExampleHref}
-                className="inline-flex items-center justify-center rounded-xl border border-white/80 bg-transparent px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-white/10"
-              >
-                Get a Free Example
               </a>
               <div className="text-sm text-white/80">24-hour turnaround • Portal-ready edits</div>
             </div>
@@ -244,6 +224,13 @@ export default function ListingHeroPage() {
               <div className="mt-1 text-sm text-slate-600">No contracts</div>
             </div>
 
+            <div className="mt-7 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-left">
+              <div className="text-sm font-semibold text-[#0A0E27]">100% Satisfaction Guarantee</div>
+              <div className="mt-2 text-sm text-slate-600">
+                If you’re not happy with the result, we’ll revise the images — or refund you. No hassle.
+              </div>
+            </div>
+
             <div className="mt-8">
               <a
                 href={whatsappHref}
@@ -282,8 +269,8 @@ export default function ListingHeroPage() {
         <div className="mx-auto max-w-6xl px-4 pb-14 pt-4 sm:pb-16 sm:pt-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm text-slate-600 sm:text-base">
-              Every image is professionally edited using industry-standard tools, with careful attention to colour,
-              lighting, and realism — no shortcuts, no gimmicks.
+              Every image is professionally edited using industry-standard property photography tools, with careful
+              attention to colour, lighting, and realism.
             </p>
             <p className="mt-6 text-base text-slate-600 sm:text-lg">
               Message us on WhatsApp and send your photos — we’ll take it from there.
