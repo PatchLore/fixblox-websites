@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 export default function ListingHeroPage() {
   const whatsappHref = "https://wa.me/447925990923";
   const freeExampleHref = "#before-after";
+  const beforeImageSrc = "/websites/images/before.jpg";
+  const afterImageSrc = "/websites/images/after.jpg";
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [redirectUrl, setRedirectUrl] = useState('');
 
@@ -71,34 +73,45 @@ export default function ListingHeroPage() {
         <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#0A0E27] sm:text-4xl">
-              Before / After
+              See the Difference
             </h2>
-            <p className="mt-3 text-base text-slate-600 sm:text-lg">
-              (Placeholder images — replace with real examples)
-            </p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
               <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-200">
-                {/* TODO: Replace with real BEFORE image */}
-                <div className="flex h-full w-full items-center justify-center text-sm font-medium text-slate-600">
-                  BEFORE (replace image)
-                </div>
+                {/* Uses /images/before.jpg from the project (public) */}
+                <img
+                  src={beforeImageSrc}
+                  alt="Before — Original listing photo"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
-              <div className="mt-4 text-center text-sm font-semibold text-slate-700">Before</div>
+              <div className="mt-4 text-center text-sm font-semibold text-slate-700">
+                Before — Original listing photo
+              </div>
             </div>
 
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
               <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-200">
-                {/* TODO: Replace with real AFTER image */}
-                <div className="flex h-full w-full items-center justify-center text-sm font-medium text-slate-600">
-                  AFTER (replace image)
-                </div>
+                {/* Uses /images/after.jpg from the project (public) */}
+                <img
+                  src={afterImageSrc}
+                  alt="After — 24-hour professional polish"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
-              <div className="mt-4 text-center text-sm font-semibold text-slate-700">After</div>
+              <div className="mt-4 text-center text-sm font-semibold text-slate-700">
+                After — 24-hour professional polish
+              </div>
             </div>
           </div>
+
+          <p className="mt-6 text-center text-sm text-slate-500">
+            Example edit using a stock property image to demonstrate our enhancement process.
+          </p>
         </div>
       </section>
 
