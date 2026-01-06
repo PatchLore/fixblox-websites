@@ -5,7 +5,11 @@ import { useEffect, useState } from 'react';
 export default function ListingHeroPage() {
   const whatsappHref = "https://wa.me/447925990923";
   const freeExampleHref = "#before-after";
-  const beforeImageSrc = "/websites/images/before.jpg";
+  // Why images weren’t rendering:
+  // - Next.js only serves static files from /public (not from /src or repo root).
+  // - This project also uses `basePath: "/websites"` so public assets are served at
+  //   `/websites/<asset>`. A plain <img> does NOT auto-prefix the basePath.
+  const beforeImageSrc = "/websites/images/before.png";
   const afterImageSrc = "/websites/images/after.jpg";
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [redirectUrl, setRedirectUrl] = useState('');
@@ -80,7 +84,7 @@ export default function ListingHeroPage() {
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
               <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-200">
-                {/* Uses /images/before.jpg from the project (public) */}
+                {/* Served from /public/images via basePath => /websites/images/before.png */}
                 <img
                   src={beforeImageSrc}
                   alt="Before — Original listing photo"
@@ -95,7 +99,7 @@ export default function ListingHeroPage() {
 
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
               <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-200">
-                {/* Uses /images/after.jpg from the project (public) */}
+                {/* Served from /public/images via basePath => /websites/images/after.jpg */}
                 <img
                   src={afterImageSrc}
                   alt="After — 24-hour professional polish"
