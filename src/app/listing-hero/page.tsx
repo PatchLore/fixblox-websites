@@ -1,8 +1,17 @@
 export default function ListingHeroPage() {
   const whatsappHref = "https://wa.me/447925990923";
+  const freeExampleHref = "#before-after";
 
   return (
     <main className="bg-white text-slate-900">
+      {/* Simple header */}
+      <header className="border-b border-slate-100 bg-white">
+        <div className="mx-auto flex max-w-6xl items-baseline justify-between px-4 py-4">
+          <div className="text-lg font-extrabold tracking-tight text-[#0A0E27]">FixBlox</div>
+          <div className="text-sm font-semibold text-slate-500">Listing Hero</div>
+        </div>
+      </header>
+
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#0066FF] to-[#00D9FF]">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
@@ -11,8 +20,11 @@ export default function ListingHeroPage() {
               Make Your Property Listings Look £50k More Expensive — In 24 Hours
             </h1>
             <p className="mt-5 text-lg text-white/90 sm:text-xl">
-              Professional photo polish for estate agents. Faster sales. Better enquiries.
+              Professional listing photo polish for estate agents.
+              <br />
+              More clicks. Better enquiries. Faster sales.
             </p>
+            <p className="mt-4 text-sm font-semibold text-white/85">Listing Hero by FixBlox</p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
@@ -21,7 +33,13 @@ export default function ListingHeroPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-semibold text-[#0066FF] shadow-sm transition hover:bg-white/95"
               >
-                WhatsApp us
+                WhatsApp Us Your Photos
+              </a>
+              <a
+                href={freeExampleHref}
+                className="inline-flex items-center justify-center rounded-xl border border-white/80 bg-transparent px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-white/10"
+              >
+                Get a Free Example
               </a>
               <div className="text-sm text-white/80">24-hour turnaround • Portal-ready edits</div>
             </div>
@@ -30,7 +48,7 @@ export default function ListingHeroPage() {
       </section>
 
       {/* Before / After */}
-      <section className="bg-white">
+      <section id="before-after" className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#0A0E27] sm:text-4xl">
@@ -65,44 +83,50 @@ export default function ListingHeroPage() {
         </div>
       </section>
 
-      {/* What We Improve */}
+      {/* What We Fix */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#0A0E27] sm:text-4xl">
-              What We Improve
+              What We Fix
             </h2>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#0066FF] to-[#00D9FF] px-3 py-1 text-xs font-semibold text-white">
-                Included
-              </div>
-              <h3 className="mt-4 text-lg font-bold text-[#0A0E27]">Exposure & colour</h3>
-              <p className="mt-2 text-sm text-slate-600">Balanced, bright, clean and consistent.</p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#0066FF] to-[#00D9FF] px-3 py-1 text-xs font-semibold text-white">
-                Included
-              </div>
-              <h3 className="mt-4 text-lg font-bold text-[#0A0E27]">Sky replacement (blue / dusk)</h3>
-              <p className="mt-2 text-sm text-slate-600">Professional skies that lift the whole listing.</p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#0066FF] to-[#00D9FF] px-3 py-1 text-xs font-semibold text-white">
-                Included
-              </div>
-              <h3 className="mt-4 text-lg font-bold text-[#0A0E27]">Window pull-through</h3>
-              <p className="mt-2 text-sm text-slate-600">Clearer interiors with natural-looking windows.</p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#0066FF] to-[#00D9FF] px-3 py-1 text-xs font-semibold text-white">
-                Included
-              </div>
-              <h3 className="mt-4 text-lg font-bold text-[#0A0E27]">Portal-ready images</h3>
-              <p className="mt-2 text-sm text-slate-600">Optimised, aligned, and ready to upload.</p>
-            </div>
+          <div className="mx-auto mt-10 max-w-3xl">
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#0066FF] to-[#00D9FF] text-sm font-extrabold text-white">
+                  ✓
+                </span>
+                <div>
+                  <div className="font-semibold text-[#0A0E27]">Exposure & colour</div>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#0066FF] to-[#00D9FF] text-sm font-extrabold text-white">
+                  ✓
+                </span>
+                <div>
+                  <div className="font-semibold text-[#0A0E27]">Sky replacement (blue / dusk)</div>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#0066FF] to-[#00D9FF] text-sm font-extrabold text-white">
+                  ✓
+                </span>
+                <div>
+                  <div className="font-semibold text-[#0A0E27]">Window pull-through</div>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#0066FF] to-[#00D9FF] text-sm font-extrabold text-white">
+                  ✓
+                </span>
+                <div>
+                  <div className="font-semibold text-[#0A0E27]">Portal-ready images</div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -159,7 +183,7 @@ export default function ListingHeroPage() {
 
           <div className="mx-auto mt-10 max-w-xl rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
             <div className="text-center">
-              <div className="text-sm font-semibold text-slate-600">Per listing</div>
+              <div className="text-sm font-semibold text-slate-600">£49 per listing</div>
               <div className="mt-2 text-5xl font-extrabold tracking-tight text-[#0A0E27]">£49</div>
               <div className="mt-3 text-sm text-slate-600">One-time payment</div>
               <div className="mt-1 text-sm text-slate-600">No contracts</div>
@@ -179,12 +203,31 @@ export default function ListingHeroPage() {
         </div>
       </section>
 
+      {/* Who This Is For */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-[#0A0E27] sm:text-4xl">
+              Who This Is For
+            </h2>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <ul className="space-y-3 text-sm text-slate-700 sm:text-base">
+              <li>Estate agents who want more clicks and better enquiries on Rightmove / Zoopla</li>
+              <li>Lettings teams wanting consistent, polished listings across a portfolio</li>
+              <li>Agencies that need fast, reliable edits without changing photographers</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#0A0E27] sm:text-4xl">
-              Ready to upgrade your next listing?
+              Final CTA
             </h2>
             <p className="mt-3 text-base text-slate-600 sm:text-lg">
               Message us on WhatsApp and send your photos — we’ll take it from there.
@@ -198,11 +241,11 @@ export default function ListingHeroPage() {
               rel="noopener noreferrer"
               className="inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-semibold text-[#0066FF] shadow-sm ring-1 ring-slate-200 transition hover:bg-slate-50"
             >
-              WhatsApp us
+              WhatsApp Us Your Photos
             </a>
           </div>
 
-          {/* Optional: simple contact form placeholder if forms already exist elsewhere in this project */}
+          {/* Simple contact form placeholder */}
           <div className="mx-auto mt-6 max-w-xl rounded-2xl border border-slate-200 bg-slate-50 p-6">
             <div className="text-sm font-semibold text-slate-700">Contact form (placeholder)</div>
             <div className="mt-2 text-sm text-slate-600">
