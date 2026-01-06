@@ -45,6 +45,14 @@ export default function LandingPage() {
 
   return (
     <div className="font-sans text-[#333] leading-relaxed">
+      {/* Simple header */}
+      <header className="border-b border-slate-100 bg-white">
+        <div className="mx-auto flex max-w-[1200px] items-baseline justify-between px-5 py-4">
+          <div className="text-lg font-extrabold tracking-tight text-[#0A0E27]">FixBlox</div>
+          <div className="text-sm font-semibold text-slate-500">Websites for Small Businesses</div>
+        </div>
+      </header>
+
       {/* Header */}
       <header
         className="text-white text-center py-[60px] px-5"
@@ -54,13 +62,10 @@ export default function LandingPage() {
       >
         <div className="max-w-[1200px] mx-auto px-5">
           <h1 className="text-[2rem] md:text-[2.5rem] mb-5 font-bold">
-            Small Business Websites
+            Professional Websites for Small Businesses — Live in 48 Hours
           </h1>
-          <p className="text-[1.1rem] md:text-[1.3rem] mb-4 opacity-95">
-            Professional websites for small businesses — live in 48 hours.
-          </p>
           <p className="text-[1.1rem] mb-8 opacity-90">
-            Clean, mobile-friendly websites that help local businesses get more calls.
+            Built to get you more calls, not just look nice.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a
@@ -187,6 +192,9 @@ export default function LandingPage() {
           <div className="text-[2.5rem] md:text-5xl font-bold my-5 text-white">£199</div>
           <p className="text-[1.2rem] mb-8 opacity-90 text-white">
             One-time payment. No subscriptions. No hidden fees.
+          </p>
+          <p className="text-sm text-white/85 mb-6">
+            Ideal for plumbers, electricians, roofers, cleaners, and other local service businesses.
           </p>
           <a
             href="#contact"
