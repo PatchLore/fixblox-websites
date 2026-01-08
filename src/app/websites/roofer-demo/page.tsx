@@ -30,16 +30,14 @@ export default function RooferDemoPage() {
       </header>
 
       {/* Hero */}
-      <section className="bg-slate-900">
+      <section className="bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
               Reliable Roofing Services You Can Trust
             </h1>
             <p className="mt-5 text-lg text-white/85 sm:text-xl">
-              Local roofing repairs, replacements, and emergency call-outs.
-              <br />
-              Fast response. Free quotes.
+              Local roofing repairs, replacements, and emergency call-outs — fast response, clear quotes, no hassle.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -56,6 +54,7 @@ export default function RooferDemoPage() {
                 Call Now
               </a>
             </div>
+            <div className="mt-3 text-sm text-white/70">We usually respond within the same business day.</div>
           </div>
         </div>
       </section>
@@ -64,7 +63,11 @@ export default function RooferDemoPage() {
       <section className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-5">
           <div className="text-center text-sm font-semibold text-slate-700 sm:text-base">
-            Fully Insured • Local &amp; Reliable • Free Quotes
+            Fully Insured <span className="text-amber-600/80">•</span> Local &amp; Reliable{' '}
+            <span className="text-amber-600/80">•</span> Free Quotes
+          </div>
+          <div className="mt-2 text-center text-xs text-slate-600 sm:text-sm">
+            Serving homeowners across the local area and surrounding regions.
           </div>
         </div>
       </section>
@@ -228,7 +231,7 @@ export default function RooferDemoPage() {
                 type="submit"
                 className="w-full rounded-xl bg-slate-900 px-6 py-3 text-base font-semibold text-white hover:bg-slate-800"
               >
-                Request a Free Quote
+                Get a Free, No-Obligation Quote
               </button>
 
               <p className="text-center text-xs text-slate-500">Demo form UI only — no messages are sent.</p>
