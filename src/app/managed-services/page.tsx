@@ -153,14 +153,128 @@ export default function ManagedServicesPage() {
           <h2 className="text-3xl font-bold mb-6 text-center text-slate-900 sm:text-4xl">
             Simple Monthly Pricing
           </h2>
-          <div className="max-w-[800px] mx-auto text-lg text-slate-700 text-center">
-            <p>
-              Managed services are priced monthly based on enquiry volume and workflow.
-            </p>
-            <p className="mt-4">
-              Most businesses fall between £200–£400 per month.
-            </p>
+          <p className="text-center text-lg text-slate-700 mb-12 max-w-2xl mx-auto">
+            Choose the level of support you need. Upgrade or downgrade anytime. No contracts.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {/* Capture Tier */}
+            <div className="bg-white rounded-lg border-2 border-slate-200 p-6 text-center">
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Capture</h3>
+              <div className="text-4xl font-bold text-[#4A9EFF] mb-1">£199</div>
+              <div className="text-slate-600 mb-4">/ month</div>
+              <p className="text-slate-700 font-semibold mb-4">Stop missing enquiries.</p>
+              <p className="text-sm text-slate-600 mb-6 italic">Solo trades drowning in admin</p>
+              <ul className="text-left space-y-2 mb-6 text-sm text-slate-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Inbox monitoring</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Missed call recovery</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Basic booking coordination</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Quote sending (template or price-list based)</span>
+                </li>
+              </ul>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full px-6 py-3 text-center rounded-lg font-semibold no-underline transition-all duration-200 bg-[#4A9EFF] text-white hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,0,0,0.2)]"
+              >
+                Get Started
+              </a>
+            </div>
+
+            {/* Convert Tier */}
+            <div className="bg-white rounded-lg border-3 border-[#4A9EFF] p-6 text-center relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#4A9EFF] text-white px-4 py-1 rounded-full text-xs font-semibold">
+                Most Popular
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Convert</h3>
+              <div className="text-4xl font-bold text-[#4A9EFF] mb-1">£449</div>
+              <div className="text-slate-600 mb-4">/ month</div>
+              <p className="text-slate-700 font-semibold mb-4">Turn more enquiries into booked jobs.</p>
+              <p className="text-sm text-slate-600 mb-6 italic">Growing trades losing quotes</p>
+              <ul className="text-left space-y-2 mb-6 text-sm text-slate-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Everything in Capture</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Proactive quote chasing</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Diary management</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>CRM updates</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Missed enquiry follow-up</span>
+                </li>
+              </ul>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full px-6 py-3 text-center rounded-lg font-semibold no-underline transition-all duration-200 bg-[#4A9EFF] text-white hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,0,0,0.2)]"
+              >
+                Get Started
+              </a>
+            </div>
+
+            {/* Scale Tier */}
+            <div className="bg-white rounded-lg border-2 border-slate-200 p-6 text-center">
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Scale</h3>
+              <div className="text-4xl font-bold text-[#4A9EFF] mb-1">from £899</div>
+              <div className="text-slate-600 mb-4">/ month</div>
+              <p className="text-slate-700 font-semibold mb-4">Your outsourced office for growing or multi-van trade businesses.</p>
+              <p className="text-sm text-slate-600 mb-6 italic">Multi-van businesses needing an office function</p>
+              <ul className="text-left space-y-2 mb-6 text-sm text-slate-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Full enquiry handling</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Phone + inbox takeover</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Ongoing follow-ups</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#4A9EFF] font-bold">•</span>
+                  <span>Priority support</span>
+                </li>
+              </ul>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full px-6 py-3 text-center rounded-lg font-semibold no-underline transition-all duration-200 bg-white text-[#4A9EFF] border-2 border-[#4A9EFF] hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,0,0,0.2)]"
+              >
+                Talk to us
+              </a>
+            </div>
           </div>
+
+          <p className="text-center text-sm text-slate-600 max-w-2xl mx-auto">
+            Pricing depends on enquiry volume and complexity. We'll confirm fit before onboarding.
+          </p>
+>>>>>>> 05a726c (Add detailed pricing tiers for Managed Services)
         </div>
       </section>
 
