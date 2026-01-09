@@ -180,6 +180,46 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Managed Services Section */}
+      <section className="bg-slate-50 py-20 px-5">
+        <div className="max-w-[1200px] mx-auto px-5">
+          <h2 className="text-[1.8rem] md:text-[2.2rem] mb-4 text-center text-[#2d3748]">
+            Managed Services (Optional)
+          </h2>
+          <p className="text-[1.1rem] md:text-[1.2rem] mb-8 text-center text-slate-700 max-w-[800px] mx-auto">
+            For businesses that want us to handle enquiries end-to-end — not just build the system.
+          </p>
+          <div className="max-w-[700px] mx-auto mb-8">
+            <ul className="list-none space-y-3">
+              <li className="flex items-start gap-3">
+                <span className="text-[#4A9EFF] text-xl font-bold mt-0.5">•</span>
+                <span className="text-[1.1rem] text-slate-700">We reply to incoming enquiries</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#4A9EFF] text-xl font-bold mt-0.5">•</span>
+                <span className="text-[1.1rem] text-slate-700">We manage bookings and calendars</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#4A9EFF] text-xl font-bold mt-0.5">•</span>
+                <span className="text-[1.1rem] text-slate-700">We send and chase quotes</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#4A9EFF] text-xl font-bold mt-0.5">•</span>
+                <span className="text-[1.1rem] text-slate-700">We follow up missed enquiries</span>
+              </li>
+            </ul>
+          </div>
+          <div className="text-center">
+            <a
+              href="/websites/managed-services"
+              className="px-[35px] py-4 text-[1.1rem] rounded-lg cursor-pointer font-semibold no-underline inline-block transition-all duration-200 bg-white text-[#4A9EFF] border-2 border-[#4A9EFF] hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,0,0,0.2)]"
+            >
+              See how managed services work
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section
         className="text-white text-center py-20 px-5"

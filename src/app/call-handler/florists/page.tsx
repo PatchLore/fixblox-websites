@@ -173,6 +173,26 @@ export default function FloristCallHandlerPage() {
         </div>
       </section>
 
+      {/* Managed Services Cross-Sell Section */}
+      <section className="bg-white py-12 px-5">
+        <div className="max-w-[1200px] mx-auto px-5">
+          <h3 className="text-2xl font-bold mb-4 text-center text-slate-900 sm:text-3xl">
+            Already getting enquiries?
+          </h3>
+          <p className="text-center text-slate-600 text-base mb-6 max-w-2xl mx-auto">
+            We can also manage replies, bookings, and follow-ups for you — so enquiries don't get lost.
+          </p>
+          <div className="text-center">
+            <a
+              href="/websites/managed-services"
+              className="inline-block text-[#4A9EFF] font-semibold text-base hover:underline"
+            >
+              View managed services
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section id="final-cta" className="bg-white py-16 px-5 sm:py-20">
         <div className="max-w-[1200px] mx-auto px-5">
