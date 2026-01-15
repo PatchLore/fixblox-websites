@@ -274,7 +274,6 @@ export default function ManagedServicesPage() {
           <p className="text-center text-sm text-slate-600 max-w-2xl mx-auto">
             Pricing depends on enquiry volume and complexity. We'll confirm fit before onboarding.
           </p>
->>>>>>> 05a726c (Add detailed pricing tiers for Managed Services)
         </div>
       </section>
 
