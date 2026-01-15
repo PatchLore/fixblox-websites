@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     'Fill empty appointment slots by re-engaging past enquiries and patients — without ads or long contracts. GDPR & PECR aware, permission-first messaging, performance-based.',
 };
 
-export default function ClientReengagementPage() {
+export default function AppointmentRecoveryPage() {
   // Reuse the existing Formspree endpoint already used on the FixBlox Websites homepage.
   const formAction = 'https://formspree.io/f/xqeavjrq';
 
@@ -258,7 +258,7 @@ export default function ClientReengagementPage() {
 
           <div className="mt-10 max-w-[640px] mx-auto rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
             <form id="contact-form" action={formAction} method="POST" className="space-y-5">
-              <input type="hidden" name="source" value="client-reengagement" />
+              <input type="hidden" name="source" value="appointment-recovery" />
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-slate-900 mb-2">
                   Name
