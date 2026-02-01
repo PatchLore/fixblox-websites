@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "speed-check": "npm run build && echo 'Build complete. Now deploy to staging and run PageSpeed Insights at https://pagespeed.web.dev'"
   },
   "dependencies": {
     "next": "^15.5.9",

@@ -38,6 +38,30 @@ npm run build
 npm start
 ```
 
+### Local Dev Checklist
+
+1. `npm run dev` — starts local server
+2. Open `http://localhost:3000` (or port shown in terminal)
+3. Test mobile view via DevTools (iPhone SE size)
+4. Click WhatsApp button — verify it opens correct `wa.me` link
+5. Check that `.next` folder exists after `npm run build` for deployment
+
+### Pre-Deploy Validation
+
+```bash
+npx tsc --noEmit   # TypeScript check
+npm run build      # Production build
+npm run lint       # ESLint (if configured)
+```
+
+## Deployment Readiness Checklist
+
+- [ ] Build folder (`.next`) exists and build completes with exit code 0
+- [ ] No console errors in browser DevTools
+- [ ] WhatsApp link prepopulates message correctly
+- [ ] Phone `tel:` link works on mobile
+- [ ] Images load in production build (check network tab)
+
 ## Deployment to Vercel
 
 1. Push your code to GitHub

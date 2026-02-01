@@ -246,7 +246,7 @@ export default function RooferDemoPage() {
           <div className="text-center text-xs text-slate-500">Example demo website built by FixBlox</div>
           <div className="text-center text-xs text-slate-500 mt-2">
             FixBlox also offers{' '}
-            <a href="/websites/managed-services" className="text-[#4A9EFF] hover:underline">
+            <a href="/managed-services" className="text-[#4A9EFF] hover:underline">
               managed enquiry and booking services
             </a>
             .

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Real Estate Photo Editing Service UK | 24h Turnaround',
@@ -10,8 +11,8 @@ export default function ListingHeroPage() {
   // - Next.js only serves static files from /public (not from /src or repo root).
   // - This project also uses `basePath: "/websites"` so public assets are served at
   //   `/websites/<asset>`. A plain <img> does NOT auto-prefix the basePath.
-  const beforeImageSrc = "/websites/images/before.png";
-  const afterImageSrc = "/websites/images/after.jpg";
+  const beforeImageSrc = "/images/before.png";
+  const afterImageSrc = "/images/after.jpg";
 
   return (
     <main className="bg-white text-slate-900">
@@ -66,13 +67,15 @@ export default function ListingHeroPage() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-              <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-200">
-                {/* Served from /public/images via basePath => /websites/images/before.png */}
-                <img
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-200 relative">
+                <Image
                   src={beforeImageSrc}
                   alt="Before — Original listing photo"
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                   loading="lazy"
+                  priority={false}
                 />
               </div>
               <div className="mt-4 text-center text-sm font-semibold text-slate-700">
@@ -81,13 +84,15 @@ export default function ListingHeroPage() {
             </div>
 
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-              <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-200">
-                {/* Served from /public/images via basePath => /websites/images/after.jpg */}
-                <img
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-200 relative">
+                <Image
                   src={afterImageSrc}
                   alt="After — 24-hour professional polish"
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                   loading="lazy"
+                  priority={false}
                 />
               </div>
               <div className="mt-4 text-center text-sm font-semibold text-slate-700">

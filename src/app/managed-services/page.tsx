@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 export default function ManagedServicesPage() {
-  const whatsappHref = "https://wa.me/447375949211";
+  const whatsappHref = "https://wa.me/447925990923";
 
   return (
     <main className="bg-white text-slate-900">
@@ -272,9 +272,8 @@ export default function ManagedServicesPage() {
           </div>
 
           <p className="text-center text-sm text-slate-600 max-w-2xl mx-auto">
-            Pricing depends on enquiry volume and complexity. We'll confirm fit before onboarding.
+            Pricing depends on enquiry volume and complexity. We&apos;ll confirm fit before onboarding. Bank transfer or card. VAT included.
           </p>
->>>>>>> 05a726c (Add detailed pricing tiers for Managed Services)
         </div>
       </section>
 

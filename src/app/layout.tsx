@@ -13,6 +13,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://api.qrserver.com" />
+        <link rel="dns-prefetch" href="https://wa.me" />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `/* Critical above-the-fold - 8-Second Test: system fonts, no render-block */
+            body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}`,
+          }}
+        />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );

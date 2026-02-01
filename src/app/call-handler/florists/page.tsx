@@ -184,7 +184,7 @@ export default function FloristCallHandlerPage() {
           </p>
           <div className="text-center">
             <a
-              href="/websites/managed-services"
+              href="/managed-services"
               className="inline-block text-[#4A9EFF] font-semibold text-base hover:underline"
             >
               View managed services
