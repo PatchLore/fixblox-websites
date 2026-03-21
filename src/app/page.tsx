@@ -186,6 +186,48 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Lead Generation Section */}
+      <section className="bg-white py-20 px-5 border-b border-slate-100">
+        <div className="max-w-[1100px] mx-auto text-center">
+          <h2 className="text-[2rem] md:text-[2.75rem] font-extrabold text-[#0F1419] mb-6">
+            We don&apos;t just answer your leads. <br className="hidden md:block" /> We generate them.
+          </h2>
+          <div className="max-w-[800px] mx-auto mb-12">
+            <p className="text-lg md:text-xl text-slate-600 mb-6 leading-relaxed">
+              Most AI receptionists wait for the phone to ring. FixBlox also makes it ring.
+            </p>
+            <p className="text-lg md:text-xl text-slate-600 mb-6 leading-relaxed">
+              Every Pro and Growth plan includes a local direct mail campaign — a professionally designed postcard sent to 8,000 homes in your area. Your number. Your offer. A unique QR code so you can see exactly how many enquiries it drives.
+            </p>
+            <p className="text-lg md:text-xl font-bold text-[#0F1419] leading-relaxed">
+              Physical mail. Digital tracking. Zero effort from you.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-[900px] mx-auto">
+            <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+              <p className="text-2xl font-bold text-[#F59E0B] mb-1">8,000</p>
+              <p className="text-sm font-semibold text-slate-600">homes per drop</p>
+            </div>
+            <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+              <p className="text-2xl font-bold text-[#F59E0B] mb-1">Tracked</p>
+              <p className="text-sm font-semibold text-slate-600">QR code per campaign</p>
+            </div>
+            <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+              <p className="text-2xl font-bold text-[#F59E0B] mb-1">Included</p>
+              <p className="text-sm font-semibold text-slate-600">in Pro & Growth plans</p>
+            </div>
+          </div>
+
+          <a
+            href="#pricing"
+            className="inline-flex items-center text-lg font-bold text-[#0F1419] hover:text-[#F59E0B] transition-colors"
+          >
+            See pricing →
+          </a>
+        </div>
+      </section>
+
       {/* With / Without Section */}
       <section className="bg-white py-20 px-5">
         <div className="max-w-[1000px] mx-auto">
