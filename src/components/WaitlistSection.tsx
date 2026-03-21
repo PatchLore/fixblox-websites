@@ -13,7 +13,7 @@ export default function WaitlistSection() {
           AI Call Handling — Coming Soon
         </h2>
         <p className="text-lg text-slate-600 mb-8">
-          Stop missing jobs while you're on the tools. Our AI receptionist answers your missed calls, 
+          Stop missing jobs while you&apos;re on the tools. Our AI receptionist answers your missed calls, 
           captures the enquiry, and books the job — automatically.
         </p>
         
@@ -34,11 +34,11 @@ export default function WaitlistSection() {
 
         {status === "success" ? (
           <div className="bg-green-100 text-green-800 px-6 py-4 rounded-lg">
-            You're on the list. We'll be in touch when it's ready.
+            You&apos;re on the list. We&apos;ll be in touch when it&apos;s ready.
           </div>
         ) : (
           <form 
-            action="https://formspree.io/f/YOUR_FORM_ID" 
+            action="https://formspree.io/f/mqakevwo" 
             method="POST"
             className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
             onSubmit={(e) => {
